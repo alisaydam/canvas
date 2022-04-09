@@ -27,6 +27,7 @@ canvas.addEventListener("mousemove", (e) => {
   }
 });
 canvas.addEventListener("click", (e) => {
+  e.preventDefault();
   mouse.x = e.x;
   mouse.y = e.y;
   for (let i = 0; i < 10; i++) {
@@ -91,7 +92,6 @@ function handleParticals() {
     }
   }
 }
-console.log(particlesArray);
 function animate() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   // ctx.fillStyle = "rgba(0,0,0,0.02)";
