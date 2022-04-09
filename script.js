@@ -32,7 +32,14 @@ canvas.addEventListener("click", (e) => {
   for (let i = 0; i < 10; i++) {
     particlesArray.push(new Particle());
   }
-  console.log(particlesArray);
+});
+canvas.addEventListener("touchmove", (e) => {
+  e.preventDefault();
+  mouse.x = e.x;
+  mouse.y = e.y;
+  for (let i = 0; i < 10; i++) {
+    particlesArray.push(new Particle());
+  }
 });
 
 class Particle {
